@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ferdie\\source\\repos\\BI-System\\BIFrontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B77CAFAE-6713-4438-8983-2833AE4E51F4}|BIFrontend\\BIFrontend.csproj|c:\\users\\ferdie\\source\\repos\\bi-system\\bifrontend\\bifrontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B77CAFAE-6713-4438-8983-2833AE4E51F4}|BIFrontend\\BIFrontend.csproj|solutionrelative:bifrontend\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\Ferdie\\source\\repos\\BI-System\\BIFrontend\\BIFrontend\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BIFrontend\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\Ferdie\\source\\repos\\BI-System\\BIFrontend\\BIFrontend\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BIFrontend\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAqwAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-13T11:40:37.371Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

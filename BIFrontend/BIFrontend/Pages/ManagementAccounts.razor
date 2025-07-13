@@ -1,0 +1,74 @@
+﻿@page "/management-accounts"
+
+@using Radzen
+@using Radzen.Blazor
+@using System.Globalization
+
+<PageTitle>Management Accounts</PageTitle>
+
+<h1>Management Accounts Module</h1>
+
+<p>This module will contain multiple dashboards at various levels (e.g., overview, detailed P&L, balance sheet). Starting with sample overview.</p>
+
+<RadzenCard Class="rz-card">
+    <h3>P&L Overview (Sample)</h3>
+    <RadzenChart>
+        <RadzenBarSeries Data="@sampleData" CategoryProperty="Date" ValueProperty="Revenue" Title="Revenue (ZAR)" />
+        <RadzenBarSeries Data="@sampleData" CategoryProperty="Date" ValueProperty="Expenses" Title="Expenses (ZAR)" />
+        <RadzenCategoryAxis FormatString="{0:MMM yyyy}" />
+        <RadzenValueAxis Formatter="@FormatAsZAR" />
+    </RadzenChart>
+</RadzenCard>
+
+<RadzenCard Class="rz-card">
+    <h3>Balance Sheet Summary (Sample)</h3>
+    <RadzenDataGrid Data="@sampleData" TItem="AccountData">
+        <Columns>
+            <RadzenDataGridColumn Property="Date" Title="Date" />
+            <RadzenDataGridColumn Property="Assets" Title="Assets (ZAR)" Formatter="@FormatAsZAR" />
+            <RadzenDataGridColumn Property="Liabilities" Title="Liabilities (ZAR)" Formatter="@FormatAsZAR" />
+            <RadzenDataGridColumn Property="IFRS_Note" Title="IFRS Note" />
+        </Columns>
+    </RadzenDataGrid>
+</RadzenCard>
+
+<style>
+    body {
+        background-color: #FFFFFF;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .rz-card {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .rz-button-primary {
+        background-color: #007BFF;
+        border-color: #007BFF;
+    }
+</style>
+
+@code {
+    private List<AccountData> sampleData = new List<AccountData>
+    {
+        new AccountData { Date = "July 2025", Revenue = 150000m, Expenses = 70000m, Assets = 250000m, Liabilities = 120000m, IFRS_Note = "IFRS 15: Revenue recognized on accrual basis; IAS 36: No impairment noted" }
+    };
+
+    private class AccountData
+    {
+        public string Date { get; set; }
+        public decimal Revenue { get; set; }
+        public decimal Expenses { get; set; }
+        public decimal Assets { get; set; }
+        public decimal Liabilities { get; set; }
+        public string IFRS_Note { get; set; }
+    }
+
+    string FormatAsZAR(object value)
+    {
+        return ((decimal)value).ToString("C2", new CultureInfo("en-ZA"));
+    }
+}   
